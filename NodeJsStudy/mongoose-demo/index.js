@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-01-21 14:04:59
+ * @LastEditTime : 2020-01-22 13:54:36
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /NodeJsStudy/mongoose-demo/index.js
+ */
 const mongoose = require('mongoose')
 
 mongoose.connect('mongodb://localhost:27017/bai', {useNewUrlParser: true})
