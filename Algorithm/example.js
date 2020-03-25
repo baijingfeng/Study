@@ -1,3 +1,4 @@
+/** 数组映射为对象 */
 var arr = [{a: 1, d: 4}, {b: 2}, {c:3}]
 
 var obj = arr.reduce((obj, item) => {
