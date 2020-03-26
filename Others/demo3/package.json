@@ -1,0 +1,12 @@
+{
+  "name": "demo3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"cd backend && node server.js\" \"cd client && yarn start\""
+  },
+  "dependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
