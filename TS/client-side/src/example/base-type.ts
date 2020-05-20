@@ -19,7 +19,7 @@ str = 'abc'
 
 str = `fsd${num}`
 
-console.log('str', str)
+// console.log('str', str)
 
 // 数组类型
 let arr: number[]
@@ -46,6 +46,64 @@ enum Roles {
 	USER = 'sfd',
 }
 
-console.log('Roles', Roles.USER)
+// console.log('Roles', Roles.USER)
 
-console.log('Roles[3]', Roles[3])
+// console.log('Roles[3]', Roles[3])
+
+//any类型
+let value: any
+
+value = 1
+value = {}
+
+// void类型
+
+const consoleText = (text: string): void => {
+	console.log('text', text)
+}
+
+let v: void
+
+v = undefined
+
+// null , undefined
+
+let u: undefined
+u = undefined
+
+// never类型
+
+const errorFunc = (message: string): never => {
+	throw new Error(message)
+}
+
+const infiniteFunc = (): never => {
+	while (true) {}
+}
+
+let neverVariable = (() => {
+	while (true) {}
+})()
+
+num = neverVariable // 说明可以将never类型赋值给number类型
+
+// object类型
+
+let obj = {
+	name: 'fs',
+}
+
+function getObject(obj: object): void {
+	console.log('obj', obj)
+}
+
+// getObject({s: 'fds '})
+
+// 类型断言
+const getLength = (target: string | number): number => {
+	if ((target as string).length || (<string>target).length === 0) {
+		return (<string>target).length
+	} else {
+		return target.toString().length
+	}
+}
