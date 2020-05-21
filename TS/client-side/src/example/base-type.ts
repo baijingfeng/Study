@@ -57,7 +57,6 @@ value = 1
 value = {}
 
 // void类型
-
 const consoleText = (text: string): void => {
 	console.log('text', text)
 }
@@ -66,13 +65,11 @@ let v: void
 
 v = undefined
 
-// null , undefined
-
+// null , undefined类型
 let u: undefined
 u = undefined
 
 // never类型
-
 const errorFunc = (message: string): never => {
 	throw new Error(message)
 }
@@ -88,7 +85,6 @@ let neverVariable = (() => {
 num = neverVariable // 说明可以将never类型赋值给number类型
 
 // object类型
-
 let obj = {
 	name: 'fs',
 }
