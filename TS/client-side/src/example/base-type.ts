@@ -69,6 +69,9 @@ v = undefined
 let u: undefined
 u = undefined
 
+let n: null
+n = null
+
 // never类型
 const errorFunc = (message: string): never => {
 	throw new Error(message)
@@ -93,7 +96,7 @@ function getObject(obj: object): void {
 	console.log('obj', obj)
 }
 
-// getObject({s: 'fds '})
+getObject({s: 'fds '})
 
 // 类型断言
 const getLength = (target: string | number): number => {
@@ -103,3 +106,5 @@ const getLength = (target: string | number): number => {
 		return target.toString().length
 	}
 }
+
+getLength('fda ')
