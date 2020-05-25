@@ -14,7 +14,6 @@ let arr4 = [1, 'fs']
 // }
 
 /** 类型兼容性 */
-
 interface InfosInf {
 	name: string
 	info: {
