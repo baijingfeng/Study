@@ -8,9 +8,7 @@ interface ValueWithLength {
 	length: number
 }
 
-interface GetArray<T extends ValueWithLength> {
-	(arg: T, times: number): T[]
-}
+type GetArray<T extends ValueWithLength> = (arg: T, times: number) => T[]
 
 let getMyArr: GetArray<string> = (arg, times) => {
 	return new Array(times).fill(arg)
