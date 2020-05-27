@@ -75,3 +75,57 @@ let value2 = '23'
 type Name = 'Lision'
 
 const name4: Name = 'Lision'
+
+/** 可辨识联合 */
+
+/** this */
+
+/** 索引类型 keyof */
+
+/**
+ *  索引访问操作符
+ *  [], 取到对应的类型
+ *  keyof,非never, undefined, null
+ *  两者可结合使用
+ */
+
+/** trailing
+ *  映射类型
+ *  [P in keyof T]
+ *  内置Readonly, Partial
+ *  内置映射类型, Pick
+ *  内置映射类型, Record
+ *  同态
+ */
+
+/** 映射类型推断, 包装 */
+
+/** 增加删除修饰符, + - */
+
+/**
+ * unknown
+ * 1. 任何类型都可以赋值给unknown类型
+ * 2. 如果没有类型断言或者基于控制流的类型细化时, unknown不可赋值给其他类型, 只能赋值给unknown和any类型
+ * 3. 如果没有类型断言或者基于控制流的类型细化时, 不能在它上面进行任何操作
+ * 4. unknown与任何其他类型组成的交叉类型, 最后都等于其他类型
+ * 5. unknown与任何其他类型组成的联合类型(除了any是any), 都等于unknown类型
+ * 6. never类型是unknown类型的子类型
+ * 7. keyofunknown类型等于never
+ * 8. 只能对unknown类型进行等或不等操作, 不能进行其他操作
+ * 9. unknown类型的值不能访问他的属性, 作为函数调用和作为类创建实例
+ * 10. 使用映射类型时, 如果遍历的是unknown类型, 则不会映射任何类型
+ */
+
+/** 条件类型 */
+/** 分布式条件类型 */
+/** 条件类型的类型推断 infer Array<infer U> */
+
+/** Exclude<T, U> 排除 */
+
+/** Extract<T, U> */
+
+/** NonNullable<T> */
+
+/** ReturnType<T> 获取函数返回值类型 */
+
+/** InstanceType<T> */
