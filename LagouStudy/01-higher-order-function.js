@@ -3,3 +3,12 @@
 // function forEach(callback, array) {
 //   for (let )
 // }
+
+const _ = require('lodash')
+
+const array = ['jack', 'tom', 'machiel', 'lucy']
+
+console.log(_.first(array))
+console.log(_.last(array))
+console.log(_.first(array))
+console.log(_.last(array))
