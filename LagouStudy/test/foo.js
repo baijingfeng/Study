@@ -66,3 +66,49 @@ new Foo().getName();
 
 new Foo().getName().getName(); 
 new new Foo().getName();             
+
+
+
+
+function Foo() {
+  getName = function() {
+    console.log(1)
+  }
+  return this
+}
+
+Foo.getName = function() {
+  console.log(2)
+}
+
+Foo.prototype.getName = function() {
+  console.log(3)
+}
+// console.log('getName', getName)
+var getName = function() {
+  console.log(4)
+}
+
+const obj = {
+  member:20
+};
+const test = a => obj.member = a;
+console.log(test(10));
+console.log(obj.member);
+
+console.log('c', c)
+a = 3 
+var b = 4
+function c() {}
+
+a2 = 3 
+let c = 4
+
+a3 = 3
+const d = 4
+
+;(function() {
+	a = 3 
+  let b = 4
+})()
+
