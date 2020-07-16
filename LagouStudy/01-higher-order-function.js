@@ -5,6 +5,7 @@
 // }
 
 const _ = require('lodash')
+const fp = require('lodash/fp')
 
 const array = ['jack', 'tom', 'machiel', 'lucy']
 
