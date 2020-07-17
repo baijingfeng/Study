@@ -1,16 +1,63 @@
-var a = 10 ; 
-var obj = { 
-  a : 100 , 
-  pro : { 
-    getpro : () => {
-      console.log(this)
-    },
+/* var a = 10
+var obj = {
+	a: 100,
+	pro: (function () {
+		return {
+			a: 1000,
+			getpro: () => {
+				console.log(this.a)
+			},
+		}
+	})(),
+}
+
+obj.pro.getpro() */
+
+// console.log('global', global)
+// var a = {n: 1}
+// var b = a
+// a.x = a = {n: 2}
+// console.log(a.x)
+// console.log(b.x)
+
+/* var obj = {
+  name: 'noshower',
+  sayName: function() {
+      var a = () => this.name;
+      console.log(a()); // noshower
   }
 }
-obj.pro.getpro()
+var name = 'bar';
+var b = obj.sayName;
 
-var a = {n: 1}
-var b = a
-a.x = a = {n: 2}
-console.log(a.x)
-console.log(b.x)
+b() */
+
+var length = 10
+function fn() {
+	console.log(this.length)
+}
+
+var obj = {
+	length: 5,
+	method: function (fn) {
+		console.log(this.length)
+		fn()
+		console.log('arguments', arguments[0])
+		arguments[0]()
+	},
+}
+
+obj.method(fn, 1)
+
+
+/* function a(xx) {
+	this.x = xx
+	return this
+}
+
+var x = a(5)
+
+var y = a(6)
+
+console.log(x.x)
+console.log(y.x) */
