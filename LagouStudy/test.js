@@ -1,5 +1,4 @@
-
-var a = 10
+/* var a = 10
 var obj = {
 	a: 100,
 	pro: (function () {
@@ -22,14 +21,14 @@ console.log(a.x)
 console.log(b.x)
 
 var obj = {
-  name: 'noshower',
-  sayName: function() {
-      var a = () => this.name;
-      console.log(a()); // noshower
-  }
+	name: 'noshower',
+	sayName: function () {
+		var a = () => this.name
+		console.log(a()) // noshower
+	},
 }
-var name = 'bar';
-var b = obj.sayName;
+var name = 'bar'
+var b = obj.sayName
 
 b()
 
@@ -48,8 +47,7 @@ var obj = {
 	},
 }
 
-obj.method(fn, 1)
-
+obj.method(fn, 1) */
 
 /* function a(xx) {
 	this.x = xx
@@ -81,6 +79,17 @@ var obj = {
 }
 
 var bar = obj.foo()
-bar() //3
+bar() //3var obj = {
+  name: 'noshower',
+  sayName: function() {
+      var a = () => this.name;
+      console.log(a()); // noshower
+  }
+}
+var name = 'bar';
+var b = obj.sayName;
+
+b()
 console.log(x.x)
 console.log(y.x) */
+

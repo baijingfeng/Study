@@ -34,4 +34,3 @@ arr.forEach((e, i) => {
 })
 
 console.log(result)
-
