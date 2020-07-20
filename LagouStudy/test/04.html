@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.19/lodash.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.19/lodash.fp.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.js"></script> -->
+		<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js"></script>
+	</head>
+	<body>
+		<script>
+			// console.log()
+			// console.log('fp', fp)
+
+			console.log('_', _)
+			console.log('_.flowRight', _.flowRight)
+			console.log('_.replace', _.replace)
+			console.log('_.toLower', _.toLower)
+			console.log('_.curry', _.curry)
+			console.log('_.replace', _.replace(/\s+/g, '_'))
+      // const fp = _
+      console.log('fp.flowRight', fp.flowRight)
+      const f = fp.flowRight(fp.toLower)
+      
+      console.log('fp.replace', fp.replace(/\s+/g, '_'))
+      
+
+			console.log('f', f('Hello   World'))
+
+			// console.log(fp.flowRight(fp.replace(/\s+/g, '_'), fp.toLower))
+			// console.log(f('Hello   World'))
+		</script>
+	</body>
+</html>
