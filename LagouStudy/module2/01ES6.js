@@ -10,7 +10,7 @@
 // Object.is(a, b), 判断两个值是否相等; NaN, +0两种情况
 // Object.defineProperty(), 用于监控属性读写, 是否可枚举.
 // Proxy 对象,代理,
-// Reflect 对象, 统一的对象操作API, 静态类; 
+// Reflect 对象, 统一的对象操作API, 静态类;
 // Reflect, 内部封装了一系列对对象的底层操作, 13个操作方法;类似Math的作用;
 // Reflect的成员方法就是Proxy处理对象的默认实现; 因 此和Reflect相同的方法名;
 // Set, 数据结构集合, add添加成员,可以链式调用.
@@ -21,8 +21,8 @@
 // Map, set,get, has, delete, clear; 属于可迭代的数据结构
 // Symbol, 表示独一无二的值, symbol类型;
 // Symbol,  Symbol('str'), Symbol目前最主要的作用是为对象添加独一无二的属性名.
-// 8种数据类型, undefined, null, boolean, string, number, Object, Symbol, BigInt 
-// Symbol, Symbol.for(''), 
+// 8种数据类型, undefined, null, boolean, string, number, Object, Symbol, BigInt
+// Symbol, Symbol.for(''),
 // for...of
 // iterator 迭代器
 
@@ -32,7 +32,7 @@
  * 因此提供了一种机制，可以对外界的访问进行过滤和改写。
  * Proxy 这个词的原意是代理，用在这里表示由它来“代理”某些操作，
  * 可以译为“代理器”。
- * 
+ *
  * get(target, propKey, receiver)：拦截对象属性的读取，比如proxy.foo和proxy['foo']。
  * set(target, propKey, value, receiver)：拦截对象属性的设置，比如proxy.foo = v或proxy['foo'] = v，返回一个布尔值。
  * has(target, propKey)：拦截propKey in proxy的操作，返回一个布尔值。
