@@ -73,3 +73,7 @@ console.log(personProxy.name)
 console.log(personProxy.xxx)
 personProxy.gender = true
 personProxy.age = 2
+
+const res = x => x
+
+console.log('res(2)', res(2))
