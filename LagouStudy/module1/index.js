@@ -1,4 +1,5 @@
-const MyPromise = require('./MyPromise')
+// const MyPromise = require('./MyPromise')
+import MyPromise from './MyPromise.js'
 
 let p = new MyPromise((resolve, reject) => {
     setTimeout(() => {

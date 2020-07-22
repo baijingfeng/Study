@@ -43,13 +43,14 @@ class MyPromise {
 	}
 }
 
-module.exports = MyPromise
-// let p = new MyPromise((resolve, reject) => {
-//     setTimeout(() => {
-//         resolve(1)
-//     }, 1000);
-// })
+// export default MyPromise
+// module.exports = MyPromise
+let p = new MyPromise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(1)
+    }, 1000);
+})
 
-// p.then(v => {
-//     console.log(v);
-// })
+p.then(v => {
+    console.log(v);
+})
