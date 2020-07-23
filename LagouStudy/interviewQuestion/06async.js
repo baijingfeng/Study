@@ -1,6 +1,6 @@
 async function async1() {
   console.log("AAAA")
-  async2()
+  await async2()
   console.log("BBBB")
 }
 
