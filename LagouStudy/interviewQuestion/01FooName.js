@@ -5,7 +5,7 @@ function Foo() {
   return this
 }
 
-Foo.getName = function() {
+Foo.getName1 = function() {
   console.log(2)
 }
 
@@ -21,10 +21,10 @@ function getName() {
   console.log(5)
 }
 
-Foo.getName() // 2
+Foo.getName1() // 2
 Foo().getName() // 1
 getName() // 1
-new Foo.getName() // 2
+new Foo.getName1() // 2
 new (Foo().getName)() // 1
 new Foo().getName() // 3 (new Foo()).getName()
 new new Foo().getName()// 3 new ((new Foo()).getName)()
