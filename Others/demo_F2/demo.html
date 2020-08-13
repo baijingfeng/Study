@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="//gw.alipayobjects.com/os/antv/assets/f2/3.4.2/f2.min.js"></script>
+	</head>
+	<body>
+		<canvas id="myChart"></canvas>
+		<script>
+			scoreArray = [
+				{
+					score: 20,
+					item: '奉献型',
+					color: 'rgba(226,138,72,1)',
+				},
+				{
+					score: 60,
+					item: '现实型',
+					color: 'rgba(0,185,132,1)',
+				},
+
+				{
+					score: 40,
+					item: '浪漫型',
+					color: 'rgba(193,33,56,1)',
+				},
+				{
+					score: 50,
+					item: '游戏型',
+					color: 'rgba(38,132,219,1)',
+				},
+				{
+					score: 30,
+					item: '占有型',
+					color: 'rgba(147,62,192,1)',
+				},
+
+				{
+					score: 80,
+					item: '友谊型',
+					color: 'rgba(244,170,43,1)',
+				},
+			]
+			
+
+			// const chart = new F2.Chart({
+			// 		id: 'myChart',
+			// 		// width: $('.myCanvas').width(),
+			// 		// height: $('.myCanvas').height(),
+			// 		padding: 20,
+			// 		pixelRatio: window.devicePixelRatio,
+			// 	})
+
+			// 	chart.coord('polar', {
+			// 		startAngle: (-1 / 3) * Math.PI, // 起始弧度
+			// 		endAngle: (5 / 3) * Math.PI, // 结束弧度
+			// 	})
+			// 	chart.source(scoreArray, {
+			// 		score: {
+			// 			min: 0,
+			// 			max: 100,
+			// 			tickCount: 6,
+			// 		},
+			// 	})
+			// 	chart.axis('score', {
+			// 		label: '',
+			// 		grid: {
+			// 			lineDash: null,
+			// 		},
+			// 		line: null,
+			// 	})
+			// 	chart.axis('item', {
+			// 		grid: null,
+			// 		label(text, index, total) {
+			// 			return {
+			// 				fill: scoreArray[index].color,
+			// 				text: `${text}\n${scoreArray[index].score}`,
+			// 			}
+			// 		},
+			// 	})
+
+			// 	chart.tooltip(false) // 禁止显示提示框
+			// 	chart.area().position('item*score').color('score', '#4D89F7')
+			// 	chart.line().position('item*score').color('#4D89F7')
+			// 	chart.point().position('item*score').color('score', '#4D89F7').style('item', {
+			// 		lineWidth: 1,
+			// 		fill: '#fff',
+			// 	})
+
+			// 	chart.render()
+			// 渲染图表的方法
+			const renderChart = scoreArray => {
+				const chart = new F2.Chart({
+					id: 'myChart',
+					// width: $('.myCanvas').width(),
+					// height: $('.myCanvas').height(),
+					padding: 20,
+					pixelRatio: window.devicePixelRatio,
+				})
+
+				chart.coord('polar', {
+					startAngle: (-1 / 3) * Math.PI, // 起始弧度
+					endAngle: (5 / 3) * Math.PI, // 结束弧度
+				})
+				chart.source(scoreArray, {
+					score: {
+						min: 0,
+						max: 100,
+						tickCount: 6,
+					},
+				})
+				chart.axis('score', {
+					label: '',
+					grid: {
+						lineDash: null,
+					},
+					line: null,
+				})
+				chart.axis('item', {
+					grid: null,
+					label(text, index, total) {
+						return {
+							fill: scoreArray[index].color,
+							text: `${text}\n${scoreArray[index].score}`,
+						}
+					},
+				})
+
+				chart.tooltip(false) // 禁止显示提示框
+				chart.area().position('item*score').color('score', '#4D89F7')
+				chart.line().position('item*score').color('#4D89F7')
+				chart.point().position('item*score').color('score', '#4D89F7').style('item', {
+					lineWidth: 1,
+					fill: '#fff',
+				})
+
+				chart.render()
+			}
+			
+			renderChart(scoreArray)
+		</script>
+	</body>
+</html>
